@@ -33,7 +33,7 @@ window.EVENT_DATA = {
     rules: ['The drawing must be completed within the announced time.', 'Units, layers, line types, dimensions, text, and drawing scale should follow the supplied brief.', 'Participants may not receive drafting assistance from another person.', 'The final file must be saved in the format and location instructed by the organisers.'],
     judging: ['Dimensional accuracy', 'Drawing completeness', 'Layer and drafting standards', 'Presentation and annotation', 'Time compliance'],
     penalties: ['Incorrect file format or missing deliverables may reduce the score.', 'Unauthorised external assistance can result in disqualification.'],
-    url: '', poster: ''
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSfE4kQM-7UwBH88Ws6tD4FENdEc4SComMtrjWhYZDSG94bTGA/viewform?usp=dialog', poster: '"C:\Users\acer\Downloads\1131w-zQKQmtzQUbI.webp"'
   },
   townhouse: {
     title: 'Townhouse Planning', category: 'Planning', entry: 'Individual / team · final size to be confirmed', time: 'Default 120 minutes',
