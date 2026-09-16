@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Certificates | UTKARSH 5.0 2026</title>
+  <meta name="description" content="UTKARSH 5.0 digital certificate, appreciation and certificate verification portal.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="certificate-page-body">
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html#home" aria-label="Utkarsh home">
+        <img src="assets/tit-logo.png" alt="Tripura Institute of Technology logo">
+        <span><small>TRIPURA INSTITUTE OF TECHNOLOGY</small><strong>UTKARSH <b>5.0</b></strong><em>Department of Civil Engineering</em></span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu ☰</button>
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <a href="index.html#home">Home page</a>
+        <a href="index.html#events">Events</a>
+        <a href="index.html#schedule">Schedule</a>
+        <a href="committee.html">Committee</a>
+        <a href="certificates.html" aria-current="page">Certificates</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cert-hero">
+        <div class="cert-hero-copy">
+          <p class="eyebrow">DIGITAL CREDENTIALS / UTKARSH 5.0</p>
+          <h1>Certificates.</h1>
+          <p class="cert-lead">A dedicated portal for participant certificates, appreciation awards, authority approval, certificate IDs and public verification.</p>
+          <div class="cert-actions">
+            <a class="button primary" href="#registry">BROWSE CERTIFICATES ↘</a>
+            <button class="button" type="button" id="authorityToggle">AUTHORITY CONSOLE</button>
+          </div>
+        </div>
+        <div class="cert-status-card">
+          <div class="cert-status-head"><span>ISSUANCE CONTROL</span><b id="windowStatus">CHECKING…</b></div>
+          <div class="cert-clock" id="approvalClock">00D 00H 00M</div>
+          <p id="windowMessage">Approval window status is being calculated.</p>
+          <div class="cert-mini-grid">
+            <div><strong id="issuedCount">0</strong><span>ISSUED</span></div>
+            <div><strong id="approvedCount">0</strong><span>APPROVED</span></div>
+            <div><strong id="pendingCount">0</strong><span>PENDING</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cert-architecture">
+        <div><span class="eyebrow">SYSTEM FLOW</span><h2>Approval → Issue → Verify.</h2></div>
+        <div class="cert-flow">
+          <article><span>01</span><strong>SUBMIT</strong><p>Participant or team record enters the certification registry.</p></article>
+          <i>→</i>
+          <article><span>02</span><strong>APPROVE</strong><p>Authorized faculty/event authority reviews the certificate.</p></article>
+          <i>→</i>
+          <article><span>03</span><strong>ISSUE</strong><p>Certificate ID and signed/approved document are generated.</p></article>
+          <i>→</i>
+          <article><span>04</span><strong>VERIFY</strong><p>Public verification confirms the certificate record.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section cert-registry" id="registry">
+        <div class="cert-section-head">
+          <div><p class="eyebrow">PUBLIC CERTIFICATE REGISTRY</p><h2>Find a credential.</h2><p class="section-intro">Search by name, team, event, certificate ID or role. Select a record to view its certificate details.</p></div>
+          <div class="cert-search-wrap">
+            <label for="certSearch">SEARCH</label>
+            <div class="cert-search"><span aria-hidden="true">⌕</span><input id="certSearch" type="search" placeholder="Name, team, certificate ID, event…"><button id="clearCertSearch" type="button" aria-label="Clear search">×</button></div>
+          </div>
+        </div>
+
+        <div class="cert-filters" role="tablist" aria-label="Certificate filters">
+          <button class="cert-filter active" data-filter="all" type="button">ALL CREDENTIALS</button>
+          <button class="cert-filter" data-filter="Winner" type="button">WINNERS</button>
+          <button class="cert-filter" data-filter="Participant" type="button">PARTICIPANTS</button>
+          <button class="cert-filter" data-filter="Appreciation" type="button">APPRECIATION</button>
+        </div>
+
+        <div class="cert-list" id="certificateList" aria-live="polite"></div>
+        <div class="cert-empty" id="certificateEmpty" hidden>No matching certificates were found.</div>
+      </section>
+
+      <section class="verify-section" id="verify">
+        <div class="verify-copy"><p class="eyebrow">PUBLIC VERIFICATION</p><h2>Verify a certificate.</h2><p>Enter the unique certificate ID or open a QR verification link to confirm the record published by the UTKARSH 5.0 certification authority.</p></div>
+        <div class="verify-box">
+          <label for="verifyInput">CERTIFICATE ID</label>
+          <div class="verify-input-row"><input id="verifyInput" placeholder="UTKARSH5-26-WIN-001" autocomplete="off"><button class="button primary" id="verifyButton" type="button">VERIFY</button></div>
+          <div class="verify-result" id="verifyResult" aria-live="polite"><span class="verify-icon">✓</span><div><strong>Ready to verify</strong><p>Enter a certificate ID to check its public status.</p></div></div>
+        </div>
+      </section>
+
+      <section class="authority-panel" id="authorityPanel" hidden>
+        <div class="authority-head"><div><p class="eyebrow">AUTHORIZED WORKFLOW / PROTOTYPE</p><h2>Certification Authority Console.</h2><p>This front-end prototype demonstrates time-bound approval. Production access control, audit logs, server-side deadlines and secure signing must be connected before live issuance.</p></div><button class="button" id="closeAuthority" type="button">CLOSE</button></div>
+        <div class="authority-window"><span>APPROVAL WINDOW</span><strong id="authorityWindowText">—</strong><b id="authorityWindowStatus">—</b></div>
+        <div class="authority-list" id="authorityList"></div>
+      </section>
+
+      <section class="cert-roadmap">
+        <div><p class="eyebrow">PRODUCTION ROADMAP</p><h2>Built to grow beyond the prototype.</h2></div>
+        <div class="roadmap-grid">
+          <article><span>V1</span><h3>Registry</h3><p>Certificate records, IDs, previews and print/save-as-PDF.</p></article>
+          <article><span>V2</span><h3>Verification</h3><p>QR links, public validation and revocation status.</p></article>
+          <article><span>V3</span><h3>Authority</h3><p>Secure login, approval queue, deadline enforcement and audit trail.</p></article>
+          <article><span>V4</span><h3>Digital Signing</h3><p>Connect an appropriate approved eSign/DSC workflow instead of exposing signing keys in the frontend.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>UTKARSH 5.0 2026 · TIT · CIVIL ENGINEERING</span><span>Digital credentials · Verification portal prototype</span></footer>
+  </div>
+
+  <div class="certificate-modal" id="certificateModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle">
+    <div class="certificate-modal-backdrop" data-close-cert></div>
+    <div class="certificate-dialog">
+      <button class="certificate-close" type="button" data-close-cert aria-label="Close certificate">×</button>
+      <div id="certificatePreview"></div>
+    </div>
+  </div>
+
+  <script src="certificate-config.js"></script>
+  <script src="certificates.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

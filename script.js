@@ -295,6 +295,43 @@ async function loadCommittee(){
 loadCommittee();
 if(typeof COMMITTEE_CONFIG !== 'undefined' && COMMITTEE_CONFIG.refreshMs) setInterval(loadCommittee, COMMITTEE_CONFIG.refreshMs);
 
+// Live countdown to UTKARSH 5.0 opening. The target is fixed to India Standard Time.
+(function initCountdown(){
+  const daysEl = document.getElementById('countdown-days');
+  const hoursEl = document.getElementById('countdown-hours');
+  const minutesEl = document.getElementById('countdown-minutes');
+  const secondsEl = document.getElementById('countdown-seconds');
+  const statusEl = document.getElementById('countdown-status');
+  if(!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+  // 22 September 2026, 00:00 IST (UTC+05:30).
+  const target = new Date('2026-09-22T00:00:00+05:30').getTime();
+
+  function pad(value){ return String(Math.max(0, value)).padStart(2, '0'); }
+
+  function update(){
+    const remaining = Math.max(0, target - Date.now());
+    const totalSeconds = Math.floor(remaining / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    daysEl.textContent = pad(days);
+    hoursEl.textContent = pad(hours);
+    minutesEl.textContent = pad(minutes);
+    secondsEl.textContent = pad(seconds);
+
+    if(remaining <= 0){
+      statusEl.textContent = 'CONSTRUCTION CLOCK COMPLETE · UTKARSH 5.0 IS LIVE';
+      clearInterval(timer);
+    }
+  }
+
+  update();
+  const timer = setInterval(update, 1000);
+})();
+
 // =========================================================
 // REFERENCE-STYLE RIGHT PAGE RAIL
 // Expands on hover/focus and tracks the section currently in view.

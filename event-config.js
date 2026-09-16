@@ -6,7 +6,7 @@
 
 window.EVENT_DATA = {
   bridge: {
-    title: 'Bridge Busting', category: 'Structures', entry: 'Team · 4 Participants', time: 'Default 300 minutes',
+    title: 'Bridge Busting', category: 'Structures', entry: 'Team · default 2–4 participants', time: 'Default 90 minutes',
     objective: 'Design and construct a model bridge that carries the required test load while maintaining stability and using materials efficiently.',
     eligibility: ['Open to registered participants of UTKARSH 5.0.', 'Participants must report before the briefing and safety check.', 'Final team size and eligibility must be confirmed by the organising committee.'],
     materials: ['Use only materials supplied or specifically permitted by the organisers.', 'No pre-fabricated structural members unless expressly permitted.', 'Tools and adhesives must follow the event briefing.'],
@@ -33,7 +33,7 @@ window.EVENT_DATA = {
     rules: ['The drawing must be completed within the announced time.', 'Units, layers, line types, dimensions, text, and drawing scale should follow the supplied brief.', 'Participants may not receive drafting assistance from another person.', 'The final file must be saved in the format and location instructed by the organisers.'],
     judging: ['Dimensional accuracy', 'Drawing completeness', 'Layer and drafting standards', 'Presentation and annotation', 'Time compliance'],
     penalties: ['Incorrect file format or missing deliverables may reduce the score.', 'Unauthorised external assistance can result in disqualification.'],
-    url: 'https://docs.google.com/forms/d/e/1FAIpQLSfE4kQM-7UwBH88Ws6tD4FENdEc4SComMtrjWhYZDSG94bTGA/viewform?usp=dialog', poster: 'C:\Users\acer\Downloads\1131w-zQKQmtzQUbI.webp'
+    url: '', poster: ''
   },
   townhouse: {
     title: 'Townhouse Planning', category: 'Planning', entry: 'Individual / team · final size to be confirmed', time: 'Default 120 minutes',
