@@ -1,49 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Committee | UTKARSH 5.0 2026</title>
-  <meta name="description" content="UTKARSH 5.0 Civil Engineering committee directory at Tripura Institute of Technology.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UTKARSH 5.0 — Committee</title>
+<meta name="description" content="UTKARSH 5.0 Committee — Department of Civil Engineering, Tripura Institute of Technology.">
+<style>
+:root{--bg:#07090c;--panel:#0d1117;--panel2:#11161d;--line:#29313b;--gold:#d9a441;--gold2:#f1c76a;--text:#f4f0e8;--muted:#9da5af;--ok:#6ee7a1;--danger:#f28b82}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;background-image:linear-gradient(rgba(217,164,65,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(217,164,65,.045) 1px,transparent 1px);background-size:36px 36px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,9,12,.15),rgba(7,9,12,.88))}
+a{color:inherit}.container{width:min(1180px,92%);margin:auto;position:relative}.topline{height:3px;background:var(--gold)}
+header{border-bottom:1px solid var(--line);background:rgba(7,9,12,.92);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+.brand-mark{width:42px;height:42px;border:1px solid var(--gold);display:grid;place-items:center;font-weight:800;color:var(--gold);letter-spacing:-1px}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;text-transform:uppercase}.brand strong{display:block;font-family:Georgia,serif;font-size:18px;letter-spacing:.5px}
+.navlink{color:var(--muted);text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:1.5px}.navlink:hover{color:var(--gold2)}
+.hero{padding:76px 0 42px}.kicker{color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase}
+h1{font-family:Georgia,serif;font-size:clamp(42px,7vw,78px);line-height:.95;margin:13px 0 18px;max-width:850px}.hero p{max-width:700px;color:var(--muted);line-height:1.75;margin:0;font-size:15px}
+.rule{display:flex;align-items:center;gap:12px;margin-top:32px;color:var(--muted);font-size:11px;letter-spacing:2px;text-transform:uppercase}.rule:before{content:"";width:58px;height:1px;background:var(--gold)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 24px}.filter{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:11px 15px;border-radius:2px;cursor:pointer;font-size:11px;letter-spacing:1.3px;text-transform:uppercase}
+.filter.active,.filter:hover{border-color:var(--gold);color:var(--gold2)}
+.status{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px;margin-bottom:22px}.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 12px rgba(110,231,161,.35)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding-bottom:72px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);min-width:0;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:#59616c}.card:after{content:"";position:absolute;left:0;top:0;width:55px;height:1px;background:var(--gold)}
+.photo{aspect-ratio:1/1;background:#080b0f;border-bottom:1px solid var(--line);display:grid;place-items:center;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.initials{width:92px;height:92px;border:1px solid #555;display:grid;place-items:center;color:var(--gold2);font:700 30px Georgia,serif}
+.body{padding:20px}.role{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}.name{font:700 25px Georgia,serif;line-height:1.12;margin-bottom:12px}
+.meta{display:grid;gap:8px;color:var(--muted);font-size:12px;line-height:1.45}.meta span b{color:#d8dde2;font-weight:500}.badge{display:inline-block;margin-top:16px;padding:6px 8px;border:1px solid #37404a;color:#c5cbd1;font-size:9px;letter-spacing:1.4px;text-transform:uppercase}
+.empty,.error{border:1px dashed var(--line);padding:35px;text-align:center;color:var(--muted);grid-column:1/-1}.error{color:var(--danger)}
+footer{border-top:1px solid var(--line);padding:30px 0 42px;color:#69717b;font-size:11px;text-align:center;letter-spacing:.5px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.nav{min-height:64px}.navlink{display:none}.hero{padding:54px 0 32px}h1{font-size:48px}.grid{grid-template-columns:1fr}.photo{aspect-ratio:4/3}}
+</style>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="index.html#home" aria-label="Utkarsh home">
-        <img src="assets/tit-logo.png" alt="Tripura Institute of Technology logo">
-        <span><small>TRIPURA INSTITUTE OF TECHNOLOGY</small><strong>UTKARSH <b>5.0</b></strong><em>Department of Civil Engineering</em></span>
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu ☰</button>
-      <nav id="main-nav" class="nav" aria-label="Main navigation">
-        <a href="index.html#home">Home page</a><a href="index.html#events">Events</a><a href="index.html#schedule">Schedule</a><a href="committee.html" aria-current="page">Committee</a><a href="certificates.html">Certificates</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a>
-      </nav>
-    </header>
-    <main>
-      <section class="committee-page committee-standalone-page">
-  <div class="committee-wrap">
-    <div class="committee-intro-row">
-      <div>
-        <p class="eyebrow">UTKARSH 5.0 / PEOPLE DIRECTORY</p>
-        <h1 class="committee-main-title"><span class="committee-title-icon" aria-hidden="true">♟</span> Committee.</h1>
-        <p class="committee-subtitle">Meet the student leaders, event coordinators, and faculty coordinators working behind UTKARSH 5.0.</p>
-      </div>
-      <div class="committee-live" aria-live="polite">
-        <span class="directory-status-dot" id="committeeStatusDot"></span>
-        <div><strong id="committeeStatus">DIRECTORY READY</strong><small id="committeeUpdated">Waiting for coordinator data.</small></div>
-      </div>
-    </div>
+<div class="topline"></div>
+<header><div class="container nav">
+<a class="brand" href="index.html" aria-label="UTKARSH 5.0 home"><div class="brand-mark">U5</div><div><small>Tripura Institute of Technology</small><strong>UTKARSH 5.0</strong></div></a>
+<a class="navlink" href="index.html">Back to Home</a>
+</div></header>
 
-    <div id="committeeDirectory" class="committee-directory committee-reference-directory" aria-live="polite">
-      <div class="committee-loading"><span></span><strong>LOADING COORDINATORS</strong><p>The public directory will appear here after the Google Sheet connection is configured.</p></div>
-    </div>
-
-  </div>
+<main class="container">
+<section class="hero">
+<div class="kicker">Department of Civil Engineering</div>
+<h1>Committee</h1>
+<p>Meet the approved team coordinating UTKARSH 5.0. This directory is connected to the official committee response system, so approved members can appear here without editing this page.</p>
+<div class="rule">Live committee directory</div>
 </section>
-    </main>
-    <footer><span>UTKARSH 5.0 2026 · TIT · CIVIL ENGINEERING</span><span>Committee directory · Public portal</span></footer>
-  </div>
-  <script src="committee-config.js"></script>
-  <script src="script.js"></script>
+
+<section aria-label="Committee filters"><div class="controls" id="filters"></div><div class="status" id="status"><span class="dot"></span><span>Loading committee...</span></div></section>
+<section class="grid" id="committeeGrid" aria-live="polite"><div class="empty">Loading approved committee members…</div></section>
+</main>
+
+<footer><div class="container"><strong>UTKARSH 5.0</strong> · Department of Civil Engineering · Tripura Institute of Technology<br><br>Committee data is published from approved Google Form responses.</div></footer>
+
+<script>
+(function(){
+"use strict";
+const API_URL="https://script.google.com/macros/s/AKfycbxL2Ak39XPaKMxuF-3OcENUk4isEI7hXPvrevhy6VOOjv686Xb85dxvuYur5hedwJvE/exec";
+const grid=document.getElementById("committeeGrid"),filters=document.getElementById("filters"),status=document.getElementById("status");
+let members=[],active="ALL";
+
+function esc(v){return String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+function initials(name){const p=String(name||"U").trim().split(/\s+/).filter(Boolean);return(p.slice(0,2).map(x=>x[0]).join("")||"U").toUpperCase();}
+function renderFilters(){
+ const roles=[...new Set(members.map(m=>String(m.role||"").trim()).filter(Boolean))];
+ const events=[...new Set(members.map(m=>String(m.event||"").trim()).filter(Boolean))];
+ const items=["ALL",...roles,...events];
+ filters.innerHTML=items.map(item=>'<button type="button" class="filter '+(active===item?"active":"")+'" data-filter="'+esc(item)+'">'+esc(item==="ALL"?"All Members":item)+'</button>').join("");
+ filters.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{active=btn.dataset.filter;renderFilters();renderCards();}));
+}
+function visible(){return active==="ALL"?members:members.filter(m=>String(m.role||"").trim()===active||String(m.event||"").trim()===active);}
+function renderCards(){
+ const list=visible();
+ if(!list.length){grid.innerHTML='<div class="empty">No approved committee members match this filter.</div>';return;}
+ grid.innerHTML=list.map(m=>{
+   const photo=String(m.photo||"").trim();
+   const image=photo
+    ? '<img src="'+esc(photo)+'" alt="'+esc(m.name||"Committee member")+'" loading="lazy" referrerpolicy="no-referrer">'
+    : '<div class="initials">'+esc(initials(m.name))+'</div>';
+   const event=m.event?'<span><b>Event:</b> '+esc(m.event)+'</span>':"";
+   const dept=m.department?'<span><b>Department:</b> '+esc(m.department)+'</span>':"";
+   const year=m.year?'<span><b>Year:</b> '+esc(m.year)+'</span>':"";
+   return '<article class="card"><div class="photo">'+image+'</div><div class="body"><div class="role">'+esc(m.role||"Committee Member")+'</div><div class="name">'+esc(m.name)+'</div><div class="meta">'+event+dept+year+'</div>'+(m.event?'<div class="badge">'+esc(m.event)+'</div>':"")+'</div></article>';
+ }).join("");
+ grid.querySelectorAll("img").forEach(img=>img.addEventListener("error",()=>{const box=img.parentElement;box.innerHTML='<div class="initials">'+esc(initials(img.alt))+'</div>';},{once:true}));
+}
+function setStatus(text,ok){status.innerHTML='<span class="dot" style="background:'+(ok?"var(--ok)":"var(--danger)")+'"></span><span>'+esc(text)+'</span>';}
+
+function loadWithJsonp(){
+ const callback="__utkarshCommittee_"+Date.now();
+ const script=document.createElement("script");
+ let finished=false;
+ const timer=setTimeout(()=>finish(null,"Committee data timed out."),15000);
+ function cleanup(){clearTimeout(timer);delete window[callback];script.remove();}
+ function finish(payload,error){
+   if(finished)return;finished=true;cleanup();
+   if(error||!payload||payload.ok===false){
+     setStatus(error||"Committee service returned an error.",false);
+     grid.innerHTML='<div class="error">'+esc(error||(payload&&payload.error)||"Unable to load committee data.")+'</div>';
+     return;
+   }
+   members=Array.isArray(payload.members)?payload.members:(Array.isArray(payload.data)?payload.data:[]);
+   setStatus(members.length+" approved member"+(members.length===1?"":"s")+" loaded",true);
+   renderFilters();renderCards();
+ }
+ window[callback]=payload=>finish(payload,null);
+ script.onerror=()=>finish(null,"Committee service could not be reached.");
+ script.src=API_URL+"?api=committee&callback="+encodeURIComponent(callback);
+ document.body.appendChild(script);
+}
+loadWithJsonp();
+})();
+</script>
 </body>
 </html>

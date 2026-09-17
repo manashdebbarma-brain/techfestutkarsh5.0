@@ -1,17 +1,40 @@
-UTKARSH 5.0 2026 — Website Build V6
+UTKARSH 5.0 — Committee Page
+================================
 
-This build keeps the existing portal sections and adds a new homepage hero animation.
+This committee.html is ready for the Vercel site and uses the Committee Apps
+Script endpoint supplied in the project.
 
-Homepage animation:
-- A framed construction/elevation scene is shown on the right side of the hero.
-- Foundation enters from the left.
-- Structural wall frames enter from both sides.
-- Floor slab and roof drop into position.
-- Windows and columns snap into place.
-- A completion indicator appears when the building is assembled.
-- The sequence loops automatically.
-- prefers-reduced-motion is respected for accessibility.
+IMPORTANT: the Apps Script endpoint must support JSONP for cross-origin loading
+from Vercel. In doGet(e), replace the committee API branch with:
 
-No external animation library is required. The animation is built with HTML/CSS only.
+if (params.api === "committee") {
+  const members = getCommitteeMembers();
+  const payload = {
+    ok: true,
+    count: members.length,
+    members: members
+  };
 
-Run locally by opening index.html, or deploy the folder to Vercel/Netlify/GitHub Pages.
+  if (params.callback) {
+    return ContentService
+      .createTextOutput(
+        params.callback + "(" + JSON.stringify(payload) + ");"
+      )
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+
+  return ContentService
+    .createTextOutput(JSON.stringify(payload))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+The page supports:
+- Approved members only
+- Role/event filters
+- Google Drive photo URLs
+- Responsive cards
+- Initials fallback when a photo fails
+- Automatic updates from the Google Form without editing committee.html
+
+After adding the JSONP branch, create a new Web App deployment/version and keep
+the same /exec URL if possible.
